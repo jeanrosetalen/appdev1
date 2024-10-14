@@ -1,15 +1,15 @@
 
-// import './App.css'
+import './MyApp.css'
 
 
-function AboutPage() {
+function MyApp() {
   return (
     <>
-      <h1>About</h1>
-      <p>Hello there.<br />How do you do?</p>
+      <h1>Welcome to my page</h1>
+      <img className="avatar" />
     </>
   );
 }
 
 
-export default AboutPage
+export default MyApp
