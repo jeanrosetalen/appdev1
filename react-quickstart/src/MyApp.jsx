@@ -1,36 +1,25 @@
+import LoginForm from "./LoginForm";
+import AdminPanel from "./AdminPanel";
 
-import './MyApp.css'
 
 
-// const user = {
-//   name: 'Hedy Lamarr',
-//   imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-//   imageSize: 90,
-// };
+function MyApp() {
 
-function MyProfile() {
-  const user = {
-    name: 'Hedy Lamarr',
-    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
-    imageSize: 90,
-  };
+  let content;
+  let isLoggedIn = true;
+
   
-  return (
-    <>
-      <h1>Welcome to my page</h1>
-      <h1>{user.name}</h1>
-      <img
-        className="avatar"
-        src={user.imageUrl}
-        alt={'Photo of ' + user.name}
-        style={{
-          width: user.imageSize,
-          height: user.imageSize
-        }}
-      />
-    </>
-  );
+    if (isLoggedIn) {
+      content = <AdminPanel />;
+    } else {
+      content = <LoginForm />;
+    }
+    return (
+      <div>
+        {content}
+      </div>
+    );
 }
 
 
-export default MyProfile
+export default MyApp
